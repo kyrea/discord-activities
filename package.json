@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Open-source discord bot to start voice activities",
   "main": "index.js",
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "nodemon index.js"
   },
