@@ -12,7 +12,7 @@ module.exports = class Invite extends Command {
   async run(interaction) {
     try {
       interaction.reply({
-        content: `[Click here to invite!](https://discord.com/api/oauth2/authorize?client_id=893159124701941802&permissions=8&scope=bot%20applications.commands)`,
+        content: `[Click here to invite!](https://discord.com/api/oauth2/authorize?client_id=893159124701941802&permissions=1&scope=bot%20applications.commands)`,
       });
     } catch (error) {
       console.error(error);
