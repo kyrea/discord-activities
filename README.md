@@ -1,10 +1,10 @@
 # Discord Activities Bot
 
-A slash command discord bot for opening Discord voice channel activities, using [Heroku](https://www.heroku.com/)
+A slash command bot for opening Discord voice channel activities.
 
 **[Add the bot](https://discord.com/api/oauth2/authorize?client_id=893159124701941802&permissions=8&scope=bot%20applications.commands)**
 
-After adding, use `/activity`
+After adding the bot, use `/activity`
 
 # Contributing
 
