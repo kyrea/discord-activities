@@ -1,6 +1,6 @@
 {
   "name": "discord-activities",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Open-source discord bot to start voice activities",
   "main": "index.js",
   "engines": {
