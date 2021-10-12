@@ -23,7 +23,6 @@ module.exports = class Ready extends Event {
       }
 
       await this.bot.application.commands.set(data);
-      this.bot.user.setStatus("offline");
       console.log(`${this.bot.user.username} is now online!`);
     } catch (error) {
       console.error(error);
