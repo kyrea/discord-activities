@@ -83,10 +83,16 @@ module.exports = class Activity extends Command {
                 emoji: "🍜",
               },
               {
-                label: "Doodle Crew",
-                description: "Creates a Doodle Crew activity invite",
-                value: "doodlecrew",
-                emoji: "🎨",
+                label: "Spellcast",
+                description: "Creates a Spellcast activity invite",
+                value: "spellcast",
+                emoji: "🪄",
+              },
+              {
+                label: "Checkers",
+                description: "Creates a Checkers activity invite",
+                value: "checkers",
+                emoji: "🏁",
               },
             ])
         );
@@ -180,13 +186,25 @@ module.exports = class Activity extends Command {
                   });
                 });
               break;
-            case "doodlecrew":
+            case "spellcast":
               this.bot.discordTogether
-                .createTogetherCode(channel.id, "doodlecrew")
+                .createTogetherCode(channel.id, "spellcast")
+                .then(async (invite) => {
+                  console.log(invite);
+                  await i.deferUpdate();
+                  return await i.editReply({
+                    content: `[Click here to join Spellcast](${invite.code} "Join A game of Spellcast")`,
+                  });
+                })
+                .catch((err) => console.log(err));
+              break;
+            case "checkers":
+              this.bot.discordTogether
+                .createTogetherCode(channel.id, "checkers")
                 .then(async (invite) => {
                   await i.deferUpdate();
                   return await i.editReply({
-                    content: `[Click here to join Doodle Crew](${invite.code} "Join A game of Doodle Crew")`,
+                    content: `[Click here to join Checkers](${invite.code} "Join A game of Checkers")`,
                   });
                 });
               break;
