@@ -114,7 +114,7 @@ module.exports = class Activity extends Command {
               },
               {
                 label: "land",
-                description: "Creates a Land activity invite",
+                description: "Creates a Land-io activity invite",
                 value: "land",
                 emoji: "🐍",
               },
