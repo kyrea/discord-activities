@@ -94,6 +94,24 @@ module.exports = class Activity extends Command {
                 value: "checkers",
                 emoji: "🏁",
               },
+              {
+                label: "Puttparty",
+                description: "Creates a Puttparty activity invite",
+                value: "puttparty",
+                emoji: "🃏",
+              },
+              {
+                label: "Sketchheads",
+                description: "Creates a Sketchheads activity invite",
+                value: "sketchheads",
+                emoji: "🖌️",
+              },
+              {
+                label: "Ocho",
+                description: "Creates a Ocho activity invite",
+                value: "ocho",
+                emoji: "🎴",
+              },
             ])
         );
 
@@ -205,6 +223,36 @@ module.exports = class Activity extends Command {
                   await i.deferUpdate();
                   return await i.editReply({
                     content: `[Click here to join Checkers](${invite.code} "Join A game of Checkers")`,
+                  });
+                });
+              break;
+            case "puttparty":
+              this.bot.discordTogether
+                .createTogetherCode(channel.id, "puttparty")
+                .then(async (invite) => {
+                  await i.deferUpdate();
+                  return await i.editReply({
+                    content: `[Click here to join Puttparty](${invite.code} "Join A game of Puttparty")`,
+                  });
+                });
+              break;
+            case "sketchheads":
+              this.bot.discordTogether
+                .createTogetherCode(channel.id, "sketchheads")
+                .then(async (invite) => {
+                  await i.deferUpdate();
+                  return await i.editReply({
+                    content: `[Click here to join Sketchheads](${invite.code} "Join A game of Sketchheads")`,
+                  });
+                });
+              break;
+            case "ocho":
+              this.bot.discordTogether
+                .createTogetherCode(channel.id, "ocho")
+                .then(async (invite) => {
+                  await i.deferUpdate();
+                  return await i.editReply({
+                    content: `[Click here to join Ocho](${invite.code} "Join A game of Ocho")`,
                   });
                 });
               break;
