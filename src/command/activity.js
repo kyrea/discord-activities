@@ -124,6 +124,12 @@ module.exports = class Activity extends Command {
                 value: "meme",
                 emoji: "😂",
               },
+              {
+                label: "Askaway",
+                description: "Creates a Askaway activity invite",
+                value: "askaway",
+                emoji: "❓",
+              },
             ])
         );
 
@@ -288,6 +294,16 @@ module.exports = class Activity extends Command {
                   });
                 });
               break;
+            case "askaway":
+                this.bot.discordTogether
+                  .createTogetherCode(channel.id, "askaway")
+                  .then(async (invite) => {
+                    await i.deferUpdate();
+                    return await i.editReply({
+                      content: `[Click here to join Askaway](${invite.code} "Join A game of Askaway")`,
+                    });
+                  });
+            break;
           }
         }
       });
