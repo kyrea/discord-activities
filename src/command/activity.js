@@ -113,10 +113,16 @@ module.exports = class Activity extends Command {
                 emoji: "🎴",
               },
               {
-                label: "land",
+                label: "Land",
                 description: "Creates a Land-io activity invite",
                 value: "land",
                 emoji: "🐍",
+              },
+              {
+                label: "Meme",
+                description: "Creates a Meme activity invite",
+                value: "meme",
+                emoji: "😂",
               },
             ])
         );
@@ -269,6 +275,16 @@ module.exports = class Activity extends Command {
                   await i.deferUpdate();
                   return await i.editReply({
                     content: `[Click here to join Land](${invite.code} "Join A game of Land")`,
+                  });
+                });
+              break;
+            case "meme":
+              this.bot.discordTogether
+                .createTogetherCode(channel.id, "meme")
+                .then(async (invite) => {
+                  await i.deferUpdate();
+                  return await i.editReply({
+                    content: `[Click here to join Meme](${invite.code} "Join A game of Meme")`,
                   });
                 });
               break;
