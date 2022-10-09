@@ -1,6 +1,6 @@
 {
   "name": "discord-activities",
-  "version": "1.2.2",
+  "version": "1.3.2",
   "description": "Open-source discord bot to start voice activities",
   "main": "index.js",
   "engines": {
@@ -9,20 +9,20 @@
   "scripts": {
     "dev": "nodemon index.js"
   },
-  "author": "aetrnyx",
+  "author": "Aeryk",
   "license": "AGPLv3",
   "dependencies": {
-    "discord-together": "^1.3.0",
+    "discord-together": "^1.3.31",
     "discord.js": "^13.1.0",
     "dotenv": "^10.0.0",
     "glob": "^7.2.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aetrnyx/discord-activities.git"
+    "url": "git+https://github.com/kyrea/discord-activities.git"
   },
   "bugs": {
-    "url": "https://github.com/aetrnyx/discord-activities/issues"
+    "url": "https://github.com/kyrea/discord-activities/issues"
   },
-  "homepage": "https://github.com/aetrnyx/discord-activities#readme"
+  "homepage": "https://github.com/kyrea/discord-activities#readme"
 }
