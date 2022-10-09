@@ -130,6 +130,12 @@ module.exports = class Activity extends Command {
                 value: "askaway",
                 emoji: "❓",
               },
+              {
+                label: "Bobble",
+                description: "Creates a Bobble activity invite",
+                value: "bobble",
+                emoji: "⚽",
+              },
             ])
         );
 
@@ -304,6 +310,16 @@ module.exports = class Activity extends Command {
                     });
                   });
             break;
+            case "bobble":
+              this.bot.discordTogether
+                .createTogetherCode(channel.id, "bobble")
+                .then(async (invite) => {
+                  await i.deferUpdate();
+                  return await i.editReply({
+                    content: `[Click here to join Bobble](${invite.code} "Join A game of Bobble")`,
+                  });
+                });
+          break;
           }
         }
       });
