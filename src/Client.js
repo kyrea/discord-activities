@@ -7,6 +7,7 @@ const {
   Routes,
 } = require("discord.js");
 const { LoadCommands, LoadEvents } = require("./structures/Utils");
+const { DiscordTogether } = require("discord-together");
 
 class Bot extends Client {
   /**
@@ -26,6 +27,7 @@ class Bot extends Client {
       GatewayIntentBits.GuildMembers,
     ];
     super(props);
+    this.discordTogether = new DiscordTogether(this);
   }
 
   _init() {
